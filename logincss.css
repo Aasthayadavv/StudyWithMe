@@ -1,0 +1,88 @@
+/* Basic styling for the body */
+body {
+    font-family: Arial, sans-serif; /* Font for the page */
+    margin: 0;
+    padding: 20px; /* Padding around the form */
+    background-color: #f4f4f4; /* Light grey background */
+}
+
+/* Bordered form */
+form {
+    border: 3px solid #f1f1f1;
+}
+
+/* Center the heading */
+h1 {
+    text-align: center; /* Center the heading */
+    color: #4caf50; /* Green color for the heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+/* Container styling */
+.container {
+    max-width: 500px; /* Increased width */
+    margin: auto;
+    padding: 40px; /* Increased padding for more space */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff; /* White background for the form */
+}
+
+/* Avatar styling */
+img.avatar {
+    width: 120px; /* Adjusted avatar size */
+    border-radius: 50%; /* Circular avatar */
+}
+
+/* Input field styling */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 15px; /* Increased padding for input fields */
+    margin-top: 10px; /* More space above input fields */
+    border: 1px solid #ccc; /* Light border for input fields */
+    border-radius: 4px;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 15px; /* Increased padding for buttons */
+    background-color: #4caf50; /* Green button */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 15px; /* More space above buttons */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Cancel button styling */
+.cancelbtn {
+    background-color: #f44336; /* Red button for cancel */
+    color: white;
+}
+
+.cancelbtn:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+}
+
+/* Styling for the password reminder */
+.psw {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 300px) {
+    .psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
+}

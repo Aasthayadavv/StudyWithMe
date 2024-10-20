@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: #4caf50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        p.tagline {
+            font-style: italic;
+            margin-top: 5px;
+            color: #fff;
+        }
+
+        .content {
+            max-width: 800px;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .content h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .content a {
+            display: inline-block;
+            margin: 10px 20px;
+            padding: 15px 30px;
+            background-color: #4caf50;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .content a:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            margin-top: 40px;
+            background-color: #4caf50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+        }
+
+        /* Style for FY, SY, TY buttons */
+        .year-btn {
+            background-color: #4caf50;  /* Same green color as header */
+            color: white;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .year-btn:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+
+        /* Styling for the question papers list */
+        #papersList ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #papersList ul li {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        #papersList ul li a {
+            color: #4caf50; /* Same green as buttons and header */
+            text-decoration: none;
+        }
+
+        #papersList ul li a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to StudyWithMe</h1>
+        <p class="tagline">~ Make your ultimate destination for academic success ~</p>
+    </header>
+
+    <div class="content">
+        <h2>Explore Our Features</h2>
+
+        <!-- Update the department button link to the file path -->
+        <a href="/department.html">Department</a>
+        <a href="#" id="previousPapersBtn">Previous Year Papers</a>
+        <a href="#Test-Series">Test Series</a>
+        <a href="#last-minute-revision">Last Minute Revision</a>
+
+        <!-- Previous Year Papers Section -->
+        <div id="previousPapersList" style="display: none; margin-top: 20px;">
+            <h3>Select Year:</h3>
+
+            <!-- Buttons for selecting FY, SY, TY -->
+            <button class="year-btn" id="fyBtn">FY</button>
+            <button class="year-btn" id="syBtn">SY</button>
+            <button class="year-btn" id="tyBtn">TY</button>
+
+            <!-- List to display the papers -->
+            <div id="papersList" style="margin-top: 20px;">
+                <h4>Past Year Question Papers:</h4>
+                <ul id="papers"></ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 StudyWithMe. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Function to fetch and display papers based on the selected year
+        async function fetchPapers(year) {
+            try {
+                const response = await fetch(`http://localhost:3000/api/papers?year=${year}`);
+                const papers = await response.json();
+                const papersList = document.getElementById('papers');
+                papersList.innerHTML = ''; // Clear previous list
+
+                papers.forEach(paper => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `<a href="${paper.fileLink}" target="_blank">${paper.subject} (${paper.paperYear})</a>`;
+                    papersList.appendChild(li);
+                });
+            } catch (error) {
+                console.error("Error fetching papers:", error);
+            }
+        }
+
+        // Event listeners for FY, SY, TY buttons
+        document.getElementById('fyBtn').addEventListener('click', () => fetchPapers('FY'));
+        document.getElementById('syBtn').addEventListener('click', () => fetchPapers('SY'));
+        document.getElementById('tyBtn').addEventListener('click', () => fetchPapers('TY'));
+
+        // Show the paper buttons when 'Previous Year Papers' is clicked
+        document.getElementById('previousPapersBtn').addEventListener('click', function(event) {
+            event.preventDefault();  // Prevent default anchor behavior
+            document.getElementById('previousPapersList').style.display = 'block';
+        });
+    </script>
+
+</body>
+</html>

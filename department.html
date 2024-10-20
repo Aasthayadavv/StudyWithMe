@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Changes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin: 15px 0 5px;
+        }
+
+        select, input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Let's Make Changes!</h1>
+
+    <div class="form-container">
+        <form action="#" method="post">
+            <!-- Department Selection -->
+            <label for="department">Please choose a department:</label>
+            <select id="department" name="department" required>
+                <option value="" disabled selected>Choose a department</option>
+                <option value="COMPS">COMPS</option>
+                <option value="IT">IT</option>
+                <option value="ETRX">ETRX</option>
+                <option value="MECH">MECH</option>
+            </select>
+
+            <!-- Year of Study Selection -->
+            <label for="year">Please choose year of study:</label>
+            <select id="year" name="year" required>
+                <option value="" disabled selected>Choose year</option>
+                <option value="1st">1st</option>
+                <option value="2nd">2nd</option>
+                <option value="3rd">3rd</option>
+                <option value="4th">4th</option>
+            </select>
+
+            <!-- Semester Selection -->
+            <label for="semester">Please choose your semester:</label>
+            <select id="semester" name="semester" required>
+                <option value="" disabled selected>Choose semester</option>
+                <option value="1">Semester 1</option>
+                <option value="2">Semester 2</option>
+                <option value="3">Semester 3</option>
+                <option value="4">Semester 4</option>
+                <option value="5">Semester 5</option>
+                <option value="6">Semester 6</option>
+                <option value="7">Semester 7</option>
+                <option value="8">Semester 8</option>
+            </select>
+
+            <!-- Submit Button -->
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Study with Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .contact-info {
+            margin-bottom: 30px;
+        }
+        .contact-info p {
+            margin: 5px 0;
+        }
+        .form-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .form-link button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .form-link button:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <script>
+        function openFormPage() {
+            window.location.href = 'contactus_fillouttheform.html';
+        }
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p>Get in touch with us for any queries or support. We're here to help you achieve your academic goals.</p>
+
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p><strong>Email:</strong> studywithme.com</p>
+            <p><strong>Phone:</strong> +91 62684 53838</p>
+            <p><strong>Location:</strong> KJSCE</p>
+        </div>
+
+        <h2>Send us a Message</h2>
+        <p>If you would like to send us a message, please click the button below to fill out the form.</p>
+
+        <div class="form-link">
+            <button onclick="openFormPage()">Fill out the form</button>
+        </div>
+    </div>
+
+</body>
+</html>

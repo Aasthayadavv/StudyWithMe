@@ -1,0 +1,78 @@
+body {
+    background-image: url('aboutttt.jpeg.jpg'); /* Replace with your image link */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    color: #ffffff; /* Changes text color to white for better visibility on dark backgrounds */
+    font-family: Arial, sans-serif; /* Set a default font */
+    margin: 0; /* Removes default margin */
+    height: 100vh; /* Full viewport height */
+    display: flex; /* Use flexbox to center content */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+}
+
+.container {
+    text-align: center; /* Center text in the container */
+    padding: 50px; /* Add some padding */
+}
+
+h2, h3, p {
+    font-size: 30px; /* Enlarge text */
+    margin: 20px 0; /* Add vertical space */
+}
+
+button {
+    font-size: 30px; /* Increase font size */
+    padding: 20px 40px; /* Add padding for button */
+    border: 2px solid red; /* Red border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: green; /* Button background color */
+    color: white; /* Button text color */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: all 0.3s ease; /* Smooth transition */
+    display: block; /* Make the button a block element for centering */
+    margin: 0 auto; /* Center the button */
+}
+
+button:hover {
+    background-color: darkgreen; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+    padding-top: 60px; /* Location of content */
+}
+
+.modal-content {
+    background-color: #fefefe; /* White background */
+    margin: 5% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888; /* Border color */
+    width: 80%; /* Could be more or less, depending on screen size */
+    color: black; /* Set text color to black */
+}
+
+.close {
+    color: #aaa; /* Gray color for close button */
+    float: right; /* Float to the right */
+    font-size: 28px; /* Close button font size */
+    font-weight: bold; /* Close button font weight */
+}
+
+.close:hover,
+.close:focus {
+    color: black; /* Change color on hover */
+    text-decoration: none; /* No underline */
+    cursor: pointer; /* Change cursor to pointer */
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyWithMe</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="main.css">
+    <style>
+        /* Styling for navigation links */
+        nav a {
+            text-decoration: none;
+            padding: 15px 30px;
+            background-color: #4caf50;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            background-color: #45a049;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>StudyWithMe</h1>
+    </header>
+
+    <nav>
+        <a href="/Index(HOME).html">Home</a>
+        <a href="about.html">About</a>
+        <a href="/contact.html" target="_blank">Contact</a>
+        <!-- Rate Us button styled similarly to other links -->
+        <a href="/rateus.html">Rate Us</a>
+    </nav>
+
+    <div class="content">
+        <h2>Welcome to StudyWithMe!</h2>
+        <p>Your ultimate online test series platform for end-moment preparation. Whether you're cramming for exams or practicing mock tests, StudyWithMe is designed to provide last-minute support to ace your tests.</p>
+        <p><strong>STUDY WITH ME, where last-minute prep meets success!</strong></p>
+
+        <h3>Our Journey</h3>
+        <p>Our journey began with a simple yet powerful vision: to provide students with an efficient platform to practice multiple-choice questions (MCQs) and prepare for exams. StudyWithMe is built to help students quickly revise and solidify key concepts at the end of their preparation.</p>
+        <p>We believe in providing a stress-free experience with a well-curated question bank and analytics to track progress. Join us in making the last phase of exam prep as productive and efficient as possible!</p>
+
+        <div class="about-makers">
+            <img src="/makerphoto.jpg" alt="Aastha Yadav">
+            <div>
+                <h3>About the Makers</h3>
+                <h4>Aastha Yadav</h4>
+                <p>Hello! I'm Aastha Yadav, the maker of this platform. I hope you'll like this last-minute preparatory platform for your exams.</p>
+            </div>
+        </div>
+
+        <!-- Button to trigger pop-up -->
+        <button id="popupBtn">Click to know more</button>
+    </div>
+
+    <!-- Modal (Pop-up) -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Special Features of StudyWithMe</h2>
+            <p>StudyWithMe offers personalized MCQ sets, performance tracking, and stress-free preparation for your exams. Keep practicing, keep improving!</p>
+        </div>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="main.js"></script>
+
+</body>
+</html>
